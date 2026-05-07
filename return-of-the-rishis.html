@@ -50,6 +50,20 @@
   .endorsement-text { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.08rem; line-height: 1.7; color: var(--ink-soft); margin-bottom: 1rem; }
   .endorsement-attr { font-family: 'Spectral', serif; font-size: 0.82rem; letter-spacing: 0.1em; color: var(--saffron); text-transform: uppercase; }
 
+  /* About Author */
+  .author-inner { max-width: 880px; margin: 0 auto; display: grid; grid-template-columns: 260px 1fr; gap: 3.5rem; align-items: start; }
+  .author-photo-wrap { position: relative; }
+  .author-photo-wrap::before { content: ''; position: absolute; inset: -8px; border: 1px solid var(--saffron); opacity: 0.4; }
+  .author-photo-wrap img { width: 100%; display: block; position: relative; z-index: 1; }
+  .author-text .section-eyebrow { text-align: left; }
+  .author-text h2 { text-align: left; font-size: clamp(1.9rem, 3.5vw, 2.6rem); margin-bottom: 1.5rem; }
+  .author-text p { font-size: 1.05rem; line-height: 1.8; color: var(--ink-soft); margin-bottom: 1.2rem; }
+
+  @media (max-width: 640px) {
+    .author-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .author-photo-wrap { max-width: 220px; margin: 0 auto; }
+  }
+
   @media (max-width: 768px) {
     .book-feature-inner { grid-template-columns: 1fr; gap: 2.5rem; }
     .page-hero, .book-feature, .content-section { padding: 4rem 1.5rem; }
@@ -146,6 +160,21 @@
         <p class="endorsement-text">Return of the Rishis is a sacred gift to the world. As you open these pages, prepare to be expanded, awakened, and moved. Vinita Pande's words may forever change how you see the world, and yourself. This is more than a book. It is an invitation to remember who you truly are.</p>
         <p class="endorsement-attr">— Rev. Bill McDonald, Author, International Speaker, Mystic</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="author-inner">
+    <div class="author-photo-wrap">
+      <img src="images/vinita-profile.png" alt="Vinita Dubey Pande">
+    </div>
+    <div class="author-text">
+      <div class="section-eyebrow">— About the Author —</div>
+      <h2>Vinita Dubey <em>Pande</em></h2>
+      <p>Vinita Dubey Pande is a spiritual author, teacher, and seeker based in Northern California. Born in Kanpur, India, she holds a degree in Computer Science from Iowa State University with a minor in Comparative Religions. After more than thirty years in IT leadership, she left the corporate world in 2024 to devote herself to spiritual practice and writing.</p>
+      <p>Vinita has studied multiple wisdom traditions for over three decades, including Vedic philosophy under the Chinmaya Mission and Kriya Yoga under Sri M. She is a certified sound healer, Past Life Regression Therapist, and spiritual life coach. She leads group sessions in meditation, Pranayama, chanting, and spiritual knowledge.</p>
+      <p>She is the author of <em>Eternal Way to Bliss</em> (John Hunt Publishing), <em>Merging with the Beloved</em> (Partridge/Penguin India), and the novel <em>Dance of Duality</em> (2024). She has appeared on YouTube channels including PGurus and Craig Hamilton-Parker's show, discussing Naadi predictions and ancient spiritual traditions.</p>
     </div>
   </div>
 </section>
