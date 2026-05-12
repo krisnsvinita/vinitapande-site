@@ -1,0 +1,9 @@
+// sitemap.xml
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://vinitapande.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://vinitapande.com/return-of-the-rishis.html</loc><priority>0.9</priority></url>
+  <url><loc>https://vinitapande.com/books.html</loc></url>
+  <url><loc>https://vinitapande.com/services.html</loc></url>
+  <url><loc>https://vinitapande.com/about.html</loc></url>
+  <url><loc>https://vinitapande.com/contact.html</loc></url>
+</urlset>
