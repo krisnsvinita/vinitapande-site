@@ -5,7 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About — Vinita Dubey Pande</title>
 <meta name="description" content="About Vinita Dubey Pande: spiritual teacher, Naadi expert, author, and certified spiritual life coach.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About Vinita Dubey Pande — Spiritual Teacher & Naadi Expert">
+<meta property="og:description" content="Spiritual teacher, Naadi expert, author of four books, and certified spiritual life coach. A bridge between ancient wisdom and modern life.">
+<meta property="og:image" content="https://vinitapande.com/images/vinita-profile.png">
+<meta property="og:url" content="https://vinitapande.com/about.html">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="alternate">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cormorant+Unicase:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -24,7 +31,16 @@
   .about-section h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.6vw, 2.6rem); font-weight: 400; line-height: 1.15; color: var(--burgundy-deep); margin-bottom: 2rem; text-align: center; }
   .about-section h2 em { font-style: italic; color: var(--saffron); }
   .about-section p { font-size: 1.08rem; line-height: 1.85; color: var(--ink-soft); margin-bottom: 1.6rem; }
-  .about-section p:first-of-type::first-letter { font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 500; float: left; line-height: 0.9; padding: 0.4rem 0.6rem 0 0; color: var(--saffron); }
+/*  .about-section p:first-of-type::first-letter { font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 500; float: left; line-height: 1; padding: 0.4rem 0.6rem 0 0; color: var(--saffron); } */
+  .about-section p:first-of-type::first-letter {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 4.5rem;
+  line-height: 0.78;
+  float: left;
+  margin: 0 0.5rem 0 0;
+  color: var(--saffron);
+}
 
   .credentials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; margin: 2.5rem 0; }
   .credential-card { background: var(--cream); padding: 1.4rem; border-left: 2px solid var(--saffron); }
@@ -40,7 +56,18 @@
 
   @media (max-width: 768px) {
     .page-hero, .about-section, .contact-cta-block { padding: 4rem 1.5rem; }
+  } 
+  @media (max-width: 600px) {
+  .about-section p:first-of-type::first-letter {
+    font-size: 2.4rem;
+    float: none;
+    display: inline;
+    margin: 0;
+    padding: 0 0.15rem 0 0;
+    line-height: 1;
+    vertical-align: -0.1em;
   }
+}
 </style>
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
@@ -56,13 +83,14 @@
       <li><a href="services.html">Services</a></li>
       <li><a href="about.html" class="active">About</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="https://vinitapande.blogspot.com/" target="_blank" rel="noopener">Blog</a></li>
+      <li><a href="https://vinitapande.blogspot.com/" target="_blank" rel="noopener" rel="me">Blog</a></li>
     </ul>
     <button class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
   </div>
 </nav>
 
 <header class="page-hero">
+<main id="content">
   <div class="page-hero-inner">
     <h1>About <em>Vinita</em></h1>
     <p class="page-hero-subtitle">Spiritual teacher. Naadi expert. Author. Bridge between worlds.</p>
@@ -166,6 +194,12 @@
   <p class="footer-tag">Naadi reader, author, and spiritual guide.</p>
   <div class="footer-bottom">© 2026 Vinita Dubey Pande · All rights reserved</div>
 </footer>
+</main>
+
+<button class="mobile-toggle"
+        aria-expanded="false"
+        aria-controls="navLinks"
+        aria-label="Open menu">☰</button>
 
 </body>
 </html>
