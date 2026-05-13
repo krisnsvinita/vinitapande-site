@@ -5,8 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Return of the Rishis — Vinita Dubey Pande</title>
 <meta name="description" content="A scientist's mind meets a five-thousand-year-old palm leaf. New book by Vinita Pande, releasing June 18, 2026.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Return of the Rishis — by Vinita Dubey Pande">
+<meta property="og:description" content="A scientist's mind meets a five-thousand-year-old palm leaf...">
+<meta property="og:image" content="https://vinitapande.com/images/return-of-the-rishis.png">
+<meta property="og:url" content="https://vinitapande.com/return-of-the-rishis.html">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="alternate">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cormorant+Unicase:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
@@ -68,6 +75,134 @@
     .book-feature-inner { grid-template-columns: 1fr; gap: 2.5rem; }
     .page-hero, .book-feature, .content-section { padding: 4rem 1.5rem; }
   }
+
+.preorder-notify {
+    background: var(--cream);
+    border: 1px solid var(--saffron);
+    padding: 1.4rem 1.6rem 1.5rem;
+    max-width: 460px;
+    position: relative;
+    margin: 0 0 2rem;
+  }
+
+  .preorder-notify-label {
+    font-family: 'Cormorant Unicase', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    color: var(--saffron);
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+
+  .preorder-notify-date {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--burgundy-deep);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .preorder-notify-date strong {
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .preorder-form {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .preorder-form input[type="email"] {
+    flex: 1 1 220px;
+    min-width: 0;
+    padding: 0.85rem 1rem;
+    font-family: 'Spectral', serif;
+    font-size: 0.95rem;
+    color: var(--ink);
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid var(--line);
+    border-radius: 0;
+    outline: none;
+    transition: border-color 0.25s ease, background 0.25s ease;
+  }
+
+  .preorder-form input[type="email"]::placeholder {
+    color: var(--ink-soft);
+    opacity: 0.55;
+    font-style: italic;
+  }
+
+  .preorder-form input[type="email"]:focus {
+    border-color: var(--saffron);
+    background: #fff;
+  }
+
+  .preorder-form button {
+    padding: 0.85rem 1.4rem;
+    font-family: 'Spectral', serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cream);
+    background: var(--saffron);
+    border: 1px solid var(--saffron);
+    cursor: pointer;
+    transition: background 0.25s ease, border-color 0.25s ease;
+    white-space: nowrap;
+  }
+
+  .preorder-form button:hover {
+    background: var(--saffron-deep);
+    border-color: var(--saffron-deep);
+  }
+
+  .preorder-form button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+  }
+
+  .preorder-fineprint {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    margin-top: 0.8rem;
+    opacity: 0.8;
+  }
+
+  /* Success + error states (swap-in) */
+  .preorder-success,
+  .preorder-error {
+    display: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    padding: 0.4rem 0 0.2rem;
+  }
+  .preorder-success {
+    color: var(--burgundy-deep);
+  }
+  .preorder-success::before {
+    content: '✦';
+    color: var(--saffron);
+    margin-right: 0.5rem;
+  }
+  .preorder-error {
+    color: #8a2a1a;
+    font-style: italic;
+  }
+
+  .preorder-notify.is-success .preorder-form,
+  .preorder-notify.is-success .preorder-fineprint { display: none; }
+  .preorder-notify.is-success .preorder-success    { display: block; }
+
+  .preorder-notify.is-error .preorder-error        { display: block; }
+
+  @media (max-width: 480px) {
+    .preorder-form button { flex: 1 1 100%; }
+  }
 </style>
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
@@ -83,12 +218,13 @@
       <li><a href="services.html">Services</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="https://vinitapande.blogspot.com/" target="_blank" rel="noopener">Blog</a></li>
+      <li><a href="https://vinitapande.blogspot.com/" target="_blank" rel="noopener" rel="me">Blog</a></li>
     </ul>
     <button class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
   </div>
 </nav>
 
+<main id="content">
 <header class="page-hero">
   <div class="page-hero-inner">
     <div class="page-hero-tag">— Releasing June 18, 2026 —</div>
@@ -122,10 +258,46 @@
       <p>In April 2024, I placed a prayer at the feet of Sri Guru Babaji and surrendered. Within weeks, a Naadi reader in Tamil Nadu found a palm leaf inscribed with my late mother's birth name — a name almost no one knew — along with a precise description of the inner conflict I had shared with no one. That leaf was over five thousand years old.</p>
       <p>What followed was eighteen months of pilgrimage, multiple readings across different Naadi traditions, and a series of world predictions that began emerging through 2025 from independent readers who had never met. <em>Return of the Rishis</em> is the record of that journey, and an invitation into the deeper traditions that stand behind it.</p>
 
-      <div class="preorder-pill">
-        <span class="preorder-pill-label">Pre-order eBook</span>
-        <span class="preorder-pill-date">May 18, 2026</span>
-      </div>
+      
+<div class="preorder-notify" id="preorderNotify">
+  <div class="preorder-notify-label">— Pre-order eBook · May 18, 2026 —</div>
+  <div class="preorder-notify-date">
+    <em>Be the first to know when pre-orders open.</em>
+  </div>
+
+  <form class="preorder-form"
+        action="https://formspree.io/f/xqenjkyd"
+        method="POST"
+        novalidate>
+    <input type="email"
+           name="email"
+           placeholder="your@email.com"
+           required
+           autocomplete="email"
+           aria-label="Email address">
+
+    <!-- Honeypot — bots fill this, humans don't. Keep it hidden. -->
+    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"
+           style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
+
+    <!-- So Vinita knows which page the signup came from -->
+    <input type="hidden" name="source" value="return-of-the-rishis">
+    <input type="hidden" name="_subject" value="Pre-order notify — Return of the Rishis">
+
+    <button type="submit">Notify me</button>
+  </form>
+
+  <div class="preorder-fineprint">
+    No newsletter, no spam. One email when pre-orders open.
+  </div>
+
+  <div class="preorder-success">
+    Thank you. You'll hear from me the moment pre-orders open.
+  </div>
+  <div class="preorder-error">
+    Something went wrong — please try again, or write to me directly.
+  </div>
+</div>
 
       <div class="buy-buttons">
         <a href="https://www.amazon.com" target="_blank" rel="noopener" class="btn btn-primary">Amazon US</a>
@@ -199,6 +371,12 @@
   <p class="footer-tag">Naadi reader, author, and spiritual guide. Translating ancient Vedic wisdom into the language of the modern soul.</p>
   <div class="footer-bottom">© 2026 Vinita Dubey Pande · All rights reserved</div>
 </footer>
+</main>
+
+<button class="mobile-toggle"
+        aria-expanded="false"
+        aria-controls="navLinks"
+        aria-label="Open menu">☰</button>
 
 <script>
   const observer = new IntersectionObserver((entries) => {
@@ -208,6 +386,39 @@
     el.classList.add('reveal');
     observer.observe(el);
   });
+</script>
+
+<script>
+  (function () {
+    const wrap = document.getElementById('preorderNotify');
+    if (!wrap) return;
+    const form = wrap.querySelector('.preorder-form');
+    const btn  = form.querySelector('button');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      wrap.classList.remove('is-error');
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          wrap.classList.add('is-success');
+        } else {
+          throw new Error('bad response');
+        }
+      } catch (err) {
+        wrap.classList.add('is-error');
+        btn.disabled = false;
+        btn.textContent = 'Notify me';
+      }
+    });
+  })();
 </script>
 
 </body>
