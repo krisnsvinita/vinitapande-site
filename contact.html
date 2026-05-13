@@ -4,9 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — Vinita Dubey Pande</title>
-<meta name="description" content="Contact Vinita Dubey Pande for sessions, readings, collaborations, or simply to say hello.">
+<meta name="description" content="Contact Vinita Dubey Pande for podcasts, collaborations, sessions, or simply to say hello.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact Vinita Dubey Pande">
+<meta property="og:description" content="Reach out for sessions, Naadi readings, collaborations, or simply to say hello. I would love to hear from you.">
+<meta property="og:image" content="https://vinitapande.com/images/vinita-profile.png">
+<meta property="og:url" content="https://vinitapande.com/contact.html">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="alternate">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cormorant+Unicase:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
@@ -21,7 +28,7 @@
   .contact-page-hero .lead { color: rgba(245, 237, 223, 0.85); font-size: 1.1rem; line-height: 1.7; margin-bottom: 2.5rem; }
 
   .social-row { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2.5rem; }
-  .social-link { width: 44px; height: 44px; border: 1px solid rgba(212, 178, 108, 0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--gold-light); transition: all 0.3s ease; }
+  .social-link { width: 44px; height: 44px; border: 1px solid rgba(212, 178, 108, 0.4); display: flex; align-items: center; justify-content: center; color: var(--gold-light); transition: all 0.3s ease; }
   .social-link svg { width: 20px; height: 20px; transition: transform 0.3s ease; }
   .social-link:hover { background: var(--gold-light); color: var(--burgundy-deep); border-color: var(--gold-light); }
   .social-link:hover svg { transform: scale(1.1); }
@@ -33,9 +40,12 @@
   /* ---- Contact form section ---- */
   :root {
     --form-card:    #ffffff;
-    --form-ink:     #3a2a14;
-    --form-muted:   #7a6a55;
-    --form-accent:  #b8860b;
+ /*   --form-ink:     #3a2a14; */
+ /*   --form-muted:   #7a6a55; */
+ /*   --form-accent:  #b8860b; */
+    --form-ink:     var(--saffron);
+    --form-muted:   var(--gold-light);
+    --form-accent:  var(--burgundy-deep);
     --form-accent2: #d4a437;
     --form-border:  #e8dcc4;
     --form-error:   #a8331f;
@@ -50,9 +60,9 @@
     padding: 32px 28px;
     background: var(--form-card);
     border: 1px solid var(--form-border);
-    border-radius: 12px;
+/*    border-radius: 12px; */
     box-shadow: 0 4px 18px rgba(184, 134, 11, 0.08);
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: 'Spectral', 'Times New Roman', serif;
     color: var(--form-ink);
   }
 
@@ -64,8 +74,8 @@
   .form-wrapper .row { display: flex; gap: 14px; }
   .form-wrapper .row .field { flex: 1; }
 
-  .form-wrapper label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; color: var(--form-ink); font-family: 'Helvetica Neue', Arial, sans-serif; }
-  .required-mark { color: var(--form-accent); margin-left: 3px; }
+  .form-wrapper label { display: block; font-size: 14px; font-weight: 400; margin-bottom: 6px; color: var(--form-ink); font-family: 'Spectral', Arial, sans-serif; }
+  .required-mark { color: var(--form-ink); margin-left: 3px; }
 
   .form-wrapper input,
   .form-wrapper textarea {
@@ -76,7 +86,7 @@
     color: var(--form-ink);
     background: #fffdf7;
     border: 1px solid var(--form-border);
-    border-radius: 6px;
+/*    border-radius: 6px; */
     box-sizing: border-box;
     transition: border-color 0.2s, box-shadow 0.2s;
   }
@@ -84,7 +94,7 @@
   .form-wrapper input:focus,
   .form-wrapper textarea:focus { outline: none; border-color: var(--form-accent); box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.15); }
 
-  .form-wrapper textarea { resize: vertical; min-height: 120px; font-family: 'Georgia', serif; }
+  .form-wrapper textarea { resize: vertical; min-height: 120px; font-family: 'Spectral', serif; }
 
   .form-wrapper input.error,
   .form-wrapper textarea.error { border-color: var(--form-error); }
@@ -99,11 +109,11 @@
     font-weight: 600;
     letter-spacing: 0.5px;
     color: #fff;
-    background: var(--form-accent);
+    background: var(--form-ink);
     border: none;
-    border-radius: 6px;
+/*    border-radius: 6px; */
     cursor: pointer;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Spectral', Arial, sans-serif;
     transition: background 0.2s, transform 0.05s;
     margin-top: 6px;
   }
@@ -112,7 +122,7 @@
   .form-wrapper button:active:not(:disabled) { transform: translateY(1px); }
   .form-wrapper button:disabled { opacity: 0.6; cursor: not-allowed; }
 
-  .status { margin-top: 16px; padding: 12px; border-radius: 6px; font-size: 14px; text-align: center; display: none; font-family: 'Helvetica Neue', Arial, sans-serif; }
+  .status { margin-top: 16px; padding: 12px; font-size: 14px; text-align: center; display: none; font-family: 'Helvetica Neue', Arial, sans-serif; }
   .status.success { display: block; background: #f0f5e8; color: var(--form-success); border: 1px solid #c9d9b3; }
   .status.fail { display: block; background: #fbeae5; color: var(--form-error); border: 1px solid #e8c4ba; }
 
@@ -135,7 +145,7 @@
       <li><a href="services.html">Services</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html" class="active">Contact</a></li>
-      <li><a href="https://vinitapande.blogspot.com/" target="_blank" rel="noopener">Blog</a></li>
+      <li><a href="https://vinitapande.blogspot.com/" target="_blank" rel="noopener" rel="me">Blog</a></li>
     </ul>
     <button class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
   </div>
