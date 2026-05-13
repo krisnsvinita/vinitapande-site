@@ -5,8 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Books — Vinita Dubey Pande</title>
 <meta name="description" content="Books by Vinita Dubey Pande: Dance of Duality, Merging with the Beloved, Eternal Way to Bliss, and the upcoming Return of the Rishis.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Books by Vinita Dubey Pande">
+<meta property="og:description" content="Dance of Duality, Merging with the Beloved, Eternal Way to Bliss — and the upcoming Return of the Rishis, releasing June 18, 2026.">
+<meta property="og:image" content="https://vinitapande.com/images/dance-of-duality.png">
+<meta property="og:url" content="https://vinitapande.com/books.html">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="alternate">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cormorant+Unicase:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
@@ -42,7 +49,8 @@
   @media (max-width: 768px) {
     .book-detail-inner, .book-detail.reverse .book-detail-inner { grid-template-columns: 1fr; gap: 2.5rem; }
     .book-detail.reverse .book-detail-content { order: 0; }
-    .book-detail-img-wrap { position: static; max-width: 320px; margin: 0 auto; }
+    .book-detail-img-wrap { position: static; aspect-ratio: auto; max-width: 320px; margin: 0 auto; display: block; }
+    .book-detail-img-wrap img { width: 100%; height: auto; max-height: none; display: block; }
     .page-hero, .book-detail { padding: 4rem 1.5rem; }
   }
 </style>
@@ -60,7 +68,7 @@
       <li><a href="services.html">Services</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="https://vinitapande.blogspot.com/" target="_blank" rel="noopener">Blog</a></li>
+      <li><a href="https://vinitapande.blogspot.com/" target="_blank" rel="noopener" rel="me">Blog</a></li>
     </ul>
     <button class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
   </div>
@@ -110,13 +118,23 @@
       </div>
 
       <div class="video-wrap">
-        <div class="video-wrap-label">— Interview · Int'l Assn. for Reincarnation Studies (Nov 2025) —</div>
-        <iframe class="video-embed" src="https://www.youtube.com/embed/fa_ogzsqNEw" title="Dance of Duality Interview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="video-wrap-label">— Interview · Int'l Assn. for Reincarnation Studies (Nov 2025)</div>
+       <!-- <iframe class="video-embed" src="https://www.youtube.com/embed/fa_ogzsqNEw" title="Dance of Duality Interview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <a href="https://www.youtube.com/watch?v=fa_ogzsqNEw" target="_blank" class="fqo2vd">
+          <div class="t3iYD">
+            <img src="images/IARS-Interview.png" class="CENy8b">
+          </div>
+        </a>
       </div>
 
       <div class="video-wrap">
         <div class="video-wrap-label">— Talk at Kashmiri Shaivism Event —</div>
-        <iframe class="video-embed" src="https://www.youtube.com/embed/fX8UaIRA8xQ" title="Kashmiri Shaivism Talk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       <!-- <iframe class="video-embed" src="https://www.youtube.com/embed/fa_ogzsqNEw" title="Dance of Duality Interview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <a href="https://www.youtube.com/watch?v=fX8UaIRA8xQ" target="_blank" class="fqo2vd">
+          <div class="t3iYD">
+            <img src="images/KS-Talk.png" class="CENy8b">
+          </div>
+        </a>
       </div>
 
       <div class="video-wrap">
@@ -126,7 +144,7 @@
             <img src="images/ShaktiWorldInterview.png" class="CENy8b">
           </div>
         </a>
-        <!-- DANCE OF DUALITY <iframe class="video-embed" src="https://www.youtube.com/watch?v=kp9XIANsFN4" title="Shakti World Interview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <!-- <iframe class="video-embed" src="https://www.youtube.com/watch?v=kp9XIANsFN4" title="Shakti World Interview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
       </div>
     </div>
   </div>
@@ -213,6 +231,24 @@
   <p class="footer-tag">Naadi reader, author, and spiritual guide. Translating ancient Vedic wisdom into the language of the modern soul.</p>
   <div class="footer-bottom">© 2026 Vinita Dubey Pande · All rights reserved</div>
 </footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Dance of Duality",
+  "author": {
+    "@type": "Person",
+    "name": "Vinita Pande"
+  },
+  "datePublished": "2024-09-19",
+  "isbn": "979-8894988573",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notion Press"
+  }
+}
+</script>
 
 </body>
 </html>
