@@ -126,6 +126,13 @@
   .status.success { display: block; background: #f0f5e8; color: var(--form-success); border: 1px solid #c9d9b3; }
   .status.fail { display: block; background: #fbeae5; color: var(--form-error); border: 1px solid #e8c4ba; }
 
+  .donation-section { background: var(--burgundy-deep); color: var(--cream); padding: 4rem 2rem; text-align: center; position: relative; overflow: hidden; }
+  .donation-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, rgba(200, 101, 27, 0.18), transparent 60%); }
+  .donation-inner { position: relative; max-width: 720px; margin: 0 auto; }
+  .donation-section h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.6vw, 2.6rem); color: var(--cream); margin-bottom: 1rem; }
+  .donation-section h2 em { font-style: italic; color: var(--gold-light); }
+  .donation-section p { color: rgba(245, 237, 223, 0.85); margin-bottom: 1.5rem; }
+
   @media (max-width: 480px) {
     .form-wrapper { padding: 24px 18px; }
     .form-wrapper .row { flex-direction: column; gap: 0; }
@@ -217,6 +224,17 @@
 
       <div class="status" id="status"></div>
     </form>
+  </div>
+</section>
+
+<!-- DONATIONS -->
+<section class="donation-section">
+  <div class="donation-inner">
+    <div class="contact-page-eyebrow" style="color: var(--gold-light);">— Donations —</div>
+    <h2>Support <em>this work</em></h2>
+    <p>If you would like to make a donation in exchange for a session or to support this work, you can do so via PayPal.</p>
+    <a href="https://www.paypal.com/paypalme/Vinita" target="_blank" rel="noopener" class="btn btn-primary">PayPal · @Vinita</a>
+    <p style="font-size: 0.9rem; margin-top: 1.5rem; font-style: italic;">Please use the Friends &amp; Family option, otherwise PayPal charges a fee.</p>
   </div>
 </section>
 
